@@ -307,8 +307,8 @@ def _partition_pdf_or_image_local(
         process_file_with_model,
     )
 
-    ocr_languages = prepare_languages_for_tesseract(languages)
-
+    # ocr_languages = prepare_languages_for_tesseract(languages)
+    ocr_languages = 'en'
     model_name = model_name if model_name else os.environ.get("UNSTRUCTURED_HI_RES_MODEL_NAME")
     pdf_image_dpi = kwargs.pop("pdf_image_dpi", None)
     extract_images_in_pdf = kwargs.get("extract_images_in_pdf", False)
